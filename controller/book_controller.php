@@ -49,6 +49,6 @@ if ($action == 'list_books') {
     }
 } else if ($action == 'list_genres') {
     $genres = get_genres();
-    include ('../view/genre_list_view.php')
+    include ('../view/genre_list_view.php');
 }
 ?>
