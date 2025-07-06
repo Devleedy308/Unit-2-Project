@@ -1,6 +1,7 @@
 <?php
 require('../database.php');
 require('../model/book_database.php');
+require('../model/genre_database.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {

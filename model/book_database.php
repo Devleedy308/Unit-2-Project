@@ -1,7 +1,7 @@
 <?php
 function get_books_by_genre($genre_id) {
     global $db;
-    $query = 'SELECT * FROM books WHERE genreID = :genre_id ORDER BY bookID';
+    $query = 'SELECT * FROM books WHERE genre_id = :genre_id ORDER BY book_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':genre_id', $genre_id);
     $statement->execute();
@@ -12,7 +12,7 @@ function get_books_by_genre($genre_id) {
 
 function delete_book($book_id) {
     global $db;
-    $query = 'DELETE FROM books WHERE bookID = :book_id';
+    $query = 'DELETE FROM books WHERE book_id = :book_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':book_id', $book_id);
     $statement->execute();
@@ -21,7 +21,7 @@ function delete_book($book_id) {
 
 function add_book($user_id, $genre_id, $title, $author, $review) {
     global $db;
-    $query = 'INSERT INTO books (userID, genreID, title, author, review)
+    $query = 'INSERT INTO books (user_id, genre_id, title, author, review)
               VALUES (:user_id, :genre_id, :title, :author, :review)';
     $statement = $db->prepare($query);
     $statement->bindValue(':user_id', $user_id);
