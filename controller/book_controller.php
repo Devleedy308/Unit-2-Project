@@ -30,7 +30,7 @@ if ($action == 'list_books') {
         echo $error;
     } else {
         delete_book($book_id);
-        header("Location: .?genre_id=$genre_id");
+        header("Location: ../controller/book_controller.php?action=list_books&genre_id=$genre_id");
         exit();
     }
 } else if ($action == 'show_add_form') {
@@ -49,7 +49,7 @@ if ($action == 'list_books') {
         echo $error;
     } else {
         add_book($user_id, $genre_id, $title, $author, $review);
-        header("Location: .?genre_id=$genre_id");
+        header("Location: ../controller/book_controller.php?action=list_books&genre_id=$genre_id");
         exit();
     }
 } else if ($action == 'list_genres') {
