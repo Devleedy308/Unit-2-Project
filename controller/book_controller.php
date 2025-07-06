@@ -2,7 +2,7 @@
 require('../database.php');
 require('../model/book_database.php');
 require('../model/genre_database.php');
-include('../view/add_book_view.php');
+
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -31,11 +31,11 @@ if ($action == 'list_books') {
     } else {
         delete_book($book_id);
         header("Location: .?genre_id=$genre_id");
+        exit();
     }
 } else if ($action == 'show_add_form') {
     $genres = get_genres();
-    include('./view/add_book_view.php');
-    echo '<pre>'; print_r($genres); echo '</pre>'; exit();
+    include('../view/add_book_view.php');
 } else if ($action == 'add_book') {
     session_start();
     $user_id = $_SESSION['user']['user_id'];
@@ -50,6 +50,7 @@ if ($action == 'list_books') {
     } else {
         add_book($user_id, $genre_id, $title, $author, $review);
         header("Location: .?genre_id=$genre_id");
+        exit();
     }
 } else if ($action == 'list_genres') {
     $genres = get_genres();

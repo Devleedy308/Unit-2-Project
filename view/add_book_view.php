@@ -8,7 +8,7 @@
 
     <form action="../controller/book_controller.php" method="post">
         <input type="hidden" name="action" value="add_book">
-        
+
         <label>Genre:</label>
         <select name="genre_id">
             <?php foreach ($genres as $genre) : ?>
