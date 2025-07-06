@@ -11,7 +11,7 @@
             <li>
                 <?php echo htmlspecialchars($book['title']); ?> 
                 by <?php echo htmlspecialchars($book['author']); ?> 
-                <form action="." method="post" style="display:inline;">
+                <form action="../controller/book_controller.php" method="post" style="display:inline;">
                     <input type="hidden" name="action" value="delete_book">
                     <input type="hidden" name="book_id" value="<?php echo $book['book_id']; ?>">
                     <input type="hidden" name="genre_id" value="<?php echo $genre_id; ?>">

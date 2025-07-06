@@ -30,14 +30,13 @@ if ($action == 'list_books') {
         echo $error;
     } else {
         delete_book($book_id);
-        header("Location: ../controller/book_controller.php?action=list_books&genre_id=$genre_id");
+        header("Location: ../book_controller.php?action=list_books");
         exit();
     }
 } else if ($action == 'show_add_form') {
     $genres = get_genres();
     include('../view/add_book_view.php');
 } else if ($action == 'add_book') {
-    session_start();
     $user_id = $_SESSION['user']['user_id'];
     $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
     $title = filter_input(INPUT_POST, 'title');
@@ -49,11 +48,21 @@ if ($action == 'list_books') {
         echo $error;
     } else {
         add_book($user_id, $genre_id, $title, $author, $review);
-        header("Location: ../controller/book_controller.php?action=list_books&genre_id=$genre_id");
+        header("Location: ../controller/book_controller.php?action=list_books");
         exit();
     }
 } else if ($action == 'list_genres') {
     $genres = get_genres();
     include ('../view/genre_list_view.php');
+} else if ($action == 'delete_genre') {
+    $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
+
+    if ($genre_id == NULL) {
+        echo "Missing or incorrect genre id.";
+    } else {
+        delete_genre($genre_id);
+        header("Location: ../controller/book_controller.php?action=list_genres");
+        exit();
+    }
 }
 ?>
