@@ -21,6 +21,6 @@
         <?php endforeach; ?>
     </ul>
 
-    <p><a href=".?action=show_add_form">Add Book</a></p>
+    <a href="../controller/book_controller.php?action=show_add_form">Add Book</a>
 </body>
 </html>

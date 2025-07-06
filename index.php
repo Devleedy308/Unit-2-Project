@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to Book App</title>
+    <title>Welcome to Book It!</title>
 </head>
 <body>
     <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user']['user_name']); ?>!</h1>

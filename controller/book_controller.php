@@ -2,6 +2,7 @@
 require('../database.php');
 require('../model/book_database.php');
 require('../model/genre_database.php');
+include('../view/add_book_view.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -33,9 +34,11 @@ if ($action == 'list_books') {
     }
 } else if ($action == 'show_add_form') {
     $genres = get_genres();
-    include('add_book_view.php');
+    include('./view/add_book_view.php');
+    echo '<pre>'; print_r($genres); echo '</pre>'; exit();
 } else if ($action == 'add_book') {
-    $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT);
+    session_start();
+    $user_id = $_SESSION['user']['user_id'];
     $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
     $title = filter_input(INPUT_POST, 'title');
     $author = filter_input(INPUT_POST, 'author');
