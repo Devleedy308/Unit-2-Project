@@ -22,6 +22,6 @@
         <input type="submit" value="Login">
     </form>
 
-    <p>Don't have an account? <a href="?action=show_register_form">Register here</a></p>
+    <p style="text-align: center; font-style: italic">Don't have an account? <a href="?action=show_register_form" style="font-style: normal; font-size: em;">Register here</a></p>
 </body>
 </html>

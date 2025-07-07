@@ -25,7 +25,7 @@ if (!isset($_SESSION['user'])) {
     <nav>
         <ul>
             <li><a href="controller/book_controller.php">Books</a></li>
-            <li><a href="controller/book_controller.php?action=list_genres">Genres</a></li>
+            <!--<li><a href="controller/book_controller.php?action=list_genres">Genres</a></li>-->
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
