@@ -10,12 +10,14 @@
         <?php foreach ($books as $book) : ?>
             <li>
                 <?php echo htmlspecialchars($book['title']); ?> 
-                by <?php echo htmlspecialchars($book['author']); ?> 
+                by <?php echo htmlspecialchars($book['author']); ?>
                 <form action="../controller/book_controller.php?action=delete_book" method="post" style="display:inline;">
                     <input type="hidden" name="book_id" value="<?php echo $book['book_id']; ?>">
                     
                     <button>Delete</button>
                 </form>
+                <br>
+                <?php echo htmlspecialchars($book['review']); ?>
             </li>
         <?php endforeach; ?>
     </ul>
