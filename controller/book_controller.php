@@ -22,21 +22,16 @@ if ($action == 'list_books') {
     $books = get_books_by_genre($genre_id);
     include('../view/book_list_view.php');
 } else if ($action == 'delete_book') {
-    $book_id = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
-    $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
-    if ($genre_id == NULL || $genre_id == FALSE || 
-            $book_id == NULL || $book_id == FALSE) {
-        $error = "Missing or incorrect book id or genre id.";
-        echo $error;
-    } else {
+    
         delete_book($book_id);
         header("Location: ../book_controller.php?action=list_books");
         exit();
-    }
+    
 } else if ($action == 'show_add_form') {
     $genres = get_genres();
     include('../view/add_book_view.php');
 } else if ($action == 'add_book') {
+    session_start();
     $user_id = $_SESSION['user']['user_id'];
     $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
     $title = filter_input(INPUT_POST, 'title');
@@ -61,7 +56,7 @@ if ($action == 'list_books') {
         echo "Missing or incorrect genre id.";
     } else {
         delete_genre($genre_id);
-        header("Location: ../controller/book_controller.php?action=list_genres");
+        header("Location: book_controller.php?action=list_genres");
         exit();
     }
 }

@@ -4,17 +4,16 @@
     <title>Book List</title>
 </head>
 <body>
-    <h1>Books in <?php echo htmlspecialchars($genre_name); ?></h1>
+    <h1>Books in My Library</h1>
 
     <ul>
         <?php foreach ($books as $book) : ?>
             <li>
                 <?php echo htmlspecialchars($book['title']); ?> 
                 by <?php echo htmlspecialchars($book['author']); ?> 
-                <form action="../controller/book_controller.php" method="post" style="display:inline;">
-                    <input type="hidden" name="action" value="delete_book">
+                <form action="../controller/book_controller.php?action=delete_book" method="post" style="display:inline;">
                     <input type="hidden" name="book_id" value="<?php echo $book['book_id']; ?>">
-                    <input type="hidden" name="genre_id" value="<?php echo $genre_id; ?>">
+                    
                     <button>Delete</button>
                 </form>
             </li>
