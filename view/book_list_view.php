@@ -2,6 +2,11 @@
 <html>
 <head>
     <style>
+    h1{
+        text-align: center;
+        color: rgb(175, 76, 139);
+        font-family: Arial, sans-serif;
+    }
     table {
         width: 80%;
         border-collapse: collapse;
