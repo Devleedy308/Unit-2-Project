@@ -52,10 +52,11 @@
         background-color: #cc0000;
     }
 </style>
+<link rel="stylesheet" type="text/css" href="../styles.css">
     <title>Book List</title>
 </head>
 <body>
-    <h1>Books in My Library</h1>
+    <h1 class="book_title">Books in My Library</h1>
 
     <table>
     
@@ -83,6 +84,6 @@
 </table>
 
 
-    <a href="../controller/book_controller.php?action=show_add_form">Add Book</a>
+    <a href="../controller/book_controller.php?action=show_add_form" class="add_book_link">Add Book</a>
 </body>
 </html>

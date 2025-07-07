@@ -28,7 +28,7 @@
         <label>Review:</label>
         <textarea name="review"></textarea><br>
 
-        <input type="submit" value="Add Book">
+        <input type="submit" value="Add Book" class="add_book_link">
     </form>
 </body>
 </html>

@@ -132,3 +132,24 @@ td button {
 td button:hover {
     background-color: #cc0000;
 }
+
+.book_title {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.add_book_link {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add_book_link:hover {
+    background-color: #cc0000;
+}
