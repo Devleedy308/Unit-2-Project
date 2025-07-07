@@ -29,7 +29,5 @@ if (!isset($_SESSION['user'])) {
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
-
-    <p>Select an option from the menu above to get started.</p>
 </body>
 </html>
