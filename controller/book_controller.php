@@ -25,10 +25,9 @@ if ($action == 'list_books') {
 } else if ($action == 'delete_book') {
     $book_id = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
     $genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
-      delete_book($book_id);
-       header("Location: book_controller.php?action=list_books&genre_id=$genre_id");
-        exit();
-    
+    delete_book($book_id);
+    header("Location: book_controller.php?action=list_books&genre_id=$genre_id");
+    exit();
 } else if ($action == 'show_add_form') {
     $genres = get_genres();
     include('../view/add_book_view.php');
