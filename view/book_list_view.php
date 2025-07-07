@@ -1,57 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-    table {
-        width: 80%;
-        border-collapse: collapse;
-        margin: 20px auto;
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-    }
-
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color:rgb(175, 76, 139);
-        color: white;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover {
-        background-color: #e9e9e9;
-    }
-
-    caption {
-        caption-side: top;
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .center {
-        text-align: center;
-    }
-
-    button {
-        background-color: #ff4d4d;
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #cc0000;
-    }
-</style>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
     <title>Book List</title>
 </head>
 <body>

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Genres</title>
 </head>
 <body>
