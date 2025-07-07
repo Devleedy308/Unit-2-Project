@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 require('../database.php');
 require('../model/book_database.php');
 require('../model/genre_database.php');
@@ -30,7 +31,7 @@ if ($action == 'list_books') {
         echo $error;
     } else {
         delete_book($book_id);
-        header("Location: ../book_controller.php?action=list_books");
+       header("Location: book_controller.php?action=list_books&genre_id=$genre_id");
         exit();
     }
 } else if ($action == 'show_add_form') {

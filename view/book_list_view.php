@@ -4,7 +4,7 @@
     <title>Book List</title>
 </head>
 <body>
-    <h1>Books in <?php echo htmlspecialchars($genre_name); ?></h1>
+    <h1>Books in My Library</h1>
 
     <ul>
         <?php foreach ($books as $book) : ?>
