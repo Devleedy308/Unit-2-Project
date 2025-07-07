@@ -119,4 +119,16 @@ nav ul {
     gap: 30px;
 }
 
-nav
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #af4c8b;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #7a2c5b;
+}
