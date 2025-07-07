@@ -16,6 +16,7 @@ if (!isset($_SESSION['user'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Welcome to Book It!</title>
 </head>
 <body>

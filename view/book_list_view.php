@@ -82,8 +82,9 @@
     </tr>
     <?php endforeach; ?>
 </table>
-
-
-    <a href="../controller/book_controller.php?action=show_add_form" class="add_book_link">Add Book</a>
+<p style="text-align: center; margin-top: 20px;">
+    <a href="../index.php">Home</a> | 
+    <a href="../controller/book_controller.php?action=show_add_form">Add Book</a>
+</p>
 </body>
 </html>
