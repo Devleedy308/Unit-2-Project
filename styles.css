@@ -1,115 +1,98 @@
- body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
-        padding: 30px;
-    }
+/* General layout and typography */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 30px;
+    color: #333;
+    text-align: center;
+}
 
-    h1 {
-        text-align: center;
-        color: #333;
-    }
+h1, .book_title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-    form {
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+/* Form styling */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
 
-    label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
-        color: #555;
-    }
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
 
-    input[type="text"],
-    textarea,
-    select {
-        width: 100%;
-        padding: 8px 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
 
-    textarea {
-        resize: vertical;
-        height: 100px;
-    }
+textarea {
+    resize: vertical;
+    height: 100px;
+}
 
-    input[type="submit"] {
-        margin-top: 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 18px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-        background-color: #45a049;
-    }
-
-    table {
-        width: 80%;
-        border-collapse: collapse;
-        margin: 20px auto;
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-    }
-
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color: rgb(175, 76, 139);
-        color: white;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover {
-        background-color: #e9e9e9;
-    }
-
-    caption {
-        caption-side: top;
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .center {
-        text-align: center;
-    }
-
-    button {
-    background-color: #ff4d4d;
+input[type="submit"],
+.add_book_link,
+button {
+    background-color: #994caf;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 10px 18px;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: inline-block;
-    text-align: center;
-    white-space: nowrap;
+    margin-top: 15px;
 }
 
+input[type="submit"]:hover,
+.add_book_link:hover,
 button:hover {
-    background-color: #cc0000;
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #af4c8b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9e9e9;
 }
 
 td form {
@@ -117,39 +100,23 @@ td form {
     display: inline;
 }
 
+/* Delete Button */
 td button {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #a34dff;
 }
 
 td button:hover {
     background-color: #cc0000;
 }
 
-.book_title {
-    text-align: center;
-    color: #333;
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-.add_book_link {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add_book_link:hover {
-    background-color: #cc0000;
-}
+nav
