@@ -23,8 +23,9 @@ if ($action == 'list_books') {
     $books = get_books_by_genre($genre_id);
     include('../view/book_list_view.php');
 } else if ($action == 'delete_book') {
-    
-        delete_book($book_id);
+    $book_id = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
+$genre_id = filter_input(INPUT_POST, 'genre_id', FILTER_VALIDATE_INT);
+      delete_book($book_id);
        header("Location: book_controller.php?action=list_books&genre_id=$genre_id");
         exit();
     
